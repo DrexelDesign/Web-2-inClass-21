@@ -21,6 +21,45 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/deploy\/img\/hero\/hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 346152,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/hero\/hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/history\/hero.png" : {
+      "ft" : 32768,
+      "iS" : 27906,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/history\/hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/skills\/grid-bot.jpg" : {
+      "ft" : 16384,
+      "iS" : 268593,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/skills\/grid-bot.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
