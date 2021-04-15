@@ -1,3 +1,17 @@
 /* =============
     Header
 ============= */
+header{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+
+    @include md{
+        grid-template-columns: 32px auto 32px;
+    }
+
+    >div{
+        grid-area: header;
+        // border: 1px solid red;
+    }
+}

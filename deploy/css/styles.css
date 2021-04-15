@@ -365,18 +365,8 @@ ul li {
   list-style: none;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-columns: auto 1200px auto;
-  grid-template-areas: ". grid-content .";
-  min-height: 100vh;
-}
-.container-grid .grid-content {
-  grid-area: grid-content;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+img {
+  width: 100%;
 }
 
 /* =============
@@ -427,6 +417,20 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+}
+@media (min-width: 768px) {
+  header {
+    grid-template-columns: 32px auto 32px;
+  }
+}
+header > div {
+  grid-area: header;
+}
+
 /* =============
     Footer
 ============= */
