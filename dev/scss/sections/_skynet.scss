@@ -1,0 +1,57 @@
+/* =============
+    Skynet
+============= */
+
+
+#skynet{
+
+    >div{
+        display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". skynet-content .";
+        ul{
+            gap:16px;
+            display: grid;
+            grid-area: skynet-content;
+            grid-template-areas:
+            "s7" 
+            "s1"
+            "s6"
+            "s3";
+            
+            li{
+    
+            }
+
+            #s1{
+                grid-area: s1;
+            }
+
+            #s2{
+                display: none;
+            }
+
+            #s3{
+                grid-area: s3;
+            }
+
+            #s4{
+                display: none;
+            }
+
+            #s5{
+                display: none;
+            }
+
+            #s6{
+                grid-area: s6;
+            }
+
+            #s7{
+                grid-area: s7;
+            }
+        }
+    }
+
+    
+}

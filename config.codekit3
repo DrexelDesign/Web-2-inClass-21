@@ -178,14 +178,6 @@
       "oAP" : "\/design\/structure-tags.sketch",
       "oF" : 0
     },
-    "\/dev\/content\/gallery.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/dev\/content\/gallery.html",
-      "oF" : 0
-    },
     "\/dev\/content\/hero-2.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -216,6 +208,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/content\/skills.html",
+      "oF" : 0
+    },
+    "\/dev\/content\/skynet.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/skynet.html",
       "oF" : 0
     },
     "\/dev\/global\/footer.kit" : {
@@ -432,6 +432,34 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/sections\/_history.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_skills.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_skills.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_skynet.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_skynet.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

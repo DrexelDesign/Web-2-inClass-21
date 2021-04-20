@@ -434,6 +434,15 @@ header > div {
 /* =============
     Footer
 ============= */
+footer {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". footer .";
+}
+footer > div {
+  grid-area: footer;
+}
+
 /* =============
     Hero
 ============= */
@@ -447,4 +456,52 @@ header > div {
 }
 #history > div {
   grid-area: history;
+}
+
+/* =============
+    Skills
+============= */
+#skills #skills-content {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". skills-content .";
+}
+#skills #skills-content > div {
+  grid-area: skills-content;
+}
+
+/* =============
+    Skynet
+============= */
+#skynet > div {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". skynet-content .";
+}
+#skynet > div ul {
+  gap: 16px;
+  display: grid;
+  grid-area: skynet-content;
+  grid-template-areas: "s7" "s1" "s6" "s3";
+}
+#skynet > div ul #s1 {
+  grid-area: s1;
+}
+#skynet > div ul #s2 {
+  display: none;
+}
+#skynet > div ul #s3 {
+  grid-area: s3;
+}
+#skynet > div ul #s4 {
+  display: none;
+}
+#skynet > div ul #s5 {
+  display: none;
+}
+#skynet > div ul #s6 {
+  grid-area: s6;
+}
+#skynet > div ul #s7 {
+  grid-area: s7;
 }

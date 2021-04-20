@@ -1,0 +1,18 @@
+/* =============
+    Skills
+============= */
+
+#skills{
+
+
+    #skills-content{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". skills-content .";
+    
+        >div{
+            grid-area: skills-content;
+        } 
+    }
+     
+}   
