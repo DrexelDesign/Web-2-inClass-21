@@ -7,9 +7,34 @@
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". history .";
 
+    @include lg{
+        grid-template-columns: auto 60vw auto;
+    }
+
+    @include xl{
+        grid-template-columns: auto 800px auto;
+    }
+
     >div{
         grid-area: history;
+        border: 1px solid green;
 
+
+        #demo{
+            
+            @include md{
+                display: grid;
+                grid-template-columns: 10vw auto 10vw;
+                grid-template-areas: ". history-last .";
+            }
+            
+            >div{
+                @include md{
+                    grid-area: history-last;
+                    border: 1px solid blue;
+                }
+            }
+        }
 
         #history-last{
             
@@ -25,7 +50,6 @@
                     grid-area: history-last;
                     border: 1px solid red;
                 }
-                
             }
         }
     }   

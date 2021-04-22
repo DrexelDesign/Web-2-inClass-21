@@ -459,8 +459,32 @@ footer > div {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". history .";
 }
+@media (min-width: 992px) {
+  #history {
+    grid-template-columns: auto 60vw auto;
+  }
+}
+@media (min-width: 1200px) {
+  #history {
+    grid-template-columns: auto 800px auto;
+  }
+}
 #history > div {
   grid-area: history;
+  border: 1px solid green;
+}
+@media (min-width: 768px) {
+  #history > div #demo {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-areas: ". history-last .";
+  }
+}
+@media (min-width: 768px) {
+  #history > div #demo > div {
+    grid-area: history-last;
+    border: 1px solid blue;
+  }
 }
 @media (min-width: 768px) {
   #history > div #history-last {
@@ -479,17 +503,35 @@ footer > div {
 /* =============
     Skills
 ============= */
-#skills #skills-content {
+@media (min-width: 1200px) {
+  #skills {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". skills .";
+  }
+}
+@media (min-width: 992px) {
+  #skills > div {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+}
+@media (min-width: 1200px) {
+  #skills > div {
+    grid-area: skills;
+  }
+}
+#skills > div #skills-content {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". skills-content .";
 }
 @media (min-width: 768px) {
-  #skills #skills-content {
+  #skills > div #skills-content {
     grid-template-columns: 10% auto 10%;
   }
 }
-#skills #skills-content > div {
+#skills > div #skills-content > div {
   grid-area: skills-content;
 }
 

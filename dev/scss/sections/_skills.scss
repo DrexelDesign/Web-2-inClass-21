@@ -4,19 +4,41 @@
 
 #skills{
 
-
-    #skills-content{
+    @include xl{
         display: grid;
-        grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". skills-content .";
+        grid-template-columns:  auto 1200px auto;
+        grid-template-areas: ". skills .";
+    }
 
-        @include md{
-            grid-template-columns: 10% auto 10%;
+    >div{
+        @include lg{
+            display: grid;
+            grid-template-columns: 40% auto;
+        }
+        @include xl{
+            grid-area: skills;
+        }
+
+        aside{
+
         }
     
-        >div{
-            grid-area: skills-content;
-        } 
+    
+        #skills-content{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". skills-content .";
+    
+            @include md{
+                grid-template-columns: 10% auto 10%;
+            }
+        
+            >div{
+                grid-area: skills-content;
+            } 
+        }
     }
+
+    
      
 }   
