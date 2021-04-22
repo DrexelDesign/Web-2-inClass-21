@@ -457,6 +457,19 @@ footer > div {
 #history > div {
   grid-area: history;
 }
+@media (min-width: 768px) {
+  #history > div #history-last {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas: ". history-last .";
+  }
+}
+@media (min-width: 768px) {
+  #history > div #history-last > div {
+    grid-area: history-last;
+    border: 1px solid red;
+  }
+}
 
 /* =============
     Skills

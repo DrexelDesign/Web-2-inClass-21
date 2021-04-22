@@ -9,5 +9,24 @@
 
     >div{
         grid-area: history;
+
+
+        #history-last{
+            
+            @include md{
+                display: grid;
+                grid-template-columns: 10% auto 10%;
+                grid-template-areas: ". history-last .";
+            }
+            
+
+            >div{
+                @include md{
+                    grid-area: history-last;
+                    border: 1px solid red;
+                }
+                
+            }
+        }
     }   
 }   
