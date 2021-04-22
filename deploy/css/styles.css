@@ -555,11 +555,23 @@ footer > div {
     grid-template-areas: "s1 s3" "s1 s7" "s5 s6";
   }
 }
+@media (min-width: 992px) {
+  #skynet > div ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "s1 s2 s3" "s1 s7 s4" "s6 s5 s4";
+  }
+}
 #skynet > div ul #s1 {
   grid-area: s1;
 }
 #skynet > div ul #s2 {
   display: none;
+}
+@media (min-width: 992px) {
+  #skynet > div ul #s2 {
+    grid-area: s2;
+    display: list-item;
+  }
 }
 #skynet > div ul #s3 {
   grid-area: s3;
@@ -567,11 +579,18 @@ footer > div {
 #skynet > div ul #s4 {
   display: none;
 }
+@media (min-width: 992px) {
+  #skynet > div ul #s4 {
+    grid-area: s4;
+    display: list-item;
+  }
+}
 #skynet > div ul #s5 {
   display: none;
 }
 @media (min-width: 768px) {
   #skynet > div ul #s5 {
+    grid-area: s5;
     display: list-item;
   }
 }

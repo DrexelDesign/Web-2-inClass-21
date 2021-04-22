@@ -28,6 +28,14 @@
                 "s1 s7"
                 "s5 s6";
             }
+
+            @include lg{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                "s1 s2 s3" 
+                "s1 s7 s4"
+                "s6 s5 s4";
+            }
             
             li{
     
@@ -39,6 +47,10 @@
 
             #s2{
                 display: none;
+                @include lg{
+                    grid-area: s2;
+                    display: list-item;
+                }
             }
 
             #s3{
@@ -47,11 +59,16 @@
 
             #s4{
                 display: none;
+                @include lg{
+                    grid-area: s4;
+                    display: list-item;
+                }
             }
 
             #s5{
                 display: none;
                 @include md{
+                    grid-area: s5;
                     display: list-item;
                 }
             }
