@@ -5,6 +5,10 @@ footer{
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
+
+    @include md{
+        grid-template-columns:  auto 60% auto;
+    }
     >div{
         grid-area: footer;
     }

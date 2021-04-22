@@ -18,6 +18,16 @@
             "s1"
             "s6"
             "s3";
+
+            @include md{
+                // grid-template-columns: 50% 50%;
+                grid-template-columns: 50% auto;
+                // grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                "s1 s3" 
+                "s1 s7"
+                "s5 s6";
+            }
             
             li{
     
@@ -41,6 +51,9 @@
 
             #s5{
                 display: none;
+                @include md{
+                    display: list-item;
+                }
             }
 
             #s6{

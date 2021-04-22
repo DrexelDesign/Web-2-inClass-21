@@ -439,6 +439,11 @@ footer {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
 }
+@media (min-width: 768px) {
+  footer {
+    grid-template-columns: auto 60% auto;
+  }
+}
 footer > div {
   grid-area: footer;
 }
@@ -502,6 +507,12 @@ footer > div {
   grid-area: skynet-content;
   grid-template-areas: "s7" "s1" "s6" "s3";
 }
+@media (min-width: 768px) {
+  #skynet > div ul {
+    grid-template-columns: 50% auto;
+    grid-template-areas: "s1 s3" "s1 s7" "s5 s6";
+  }
+}
 #skynet > div ul #s1 {
   grid-area: s1;
 }
@@ -516,6 +527,11 @@ footer > div {
 }
 #skynet > div ul #s5 {
   display: none;
+}
+@media (min-width: 768px) {
+  #skynet > div ul #s5 {
+    display: list-item;
+  }
 }
 #skynet > div ul #s6 {
   grid-area: s6;
