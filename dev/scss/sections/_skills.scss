@@ -28,6 +28,8 @@
             display: grid;
             grid-template-columns: 16px auto 16px;
             grid-template-areas: ". skills-content .";
+            background-color: $charcoal;
+            color: $white;
     
             @include md{
                 grid-template-columns: 10% auto 10%;

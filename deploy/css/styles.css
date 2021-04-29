@@ -430,6 +430,9 @@ header {
 header > div {
   grid-area: header;
 }
+header > div button {
+  background-color: #F8C832;
+}
 
 /* =============
     Footer
@@ -438,6 +441,7 @@ footer {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
+  background-color: #F8C832;
 }
 @media (min-width: 768px) {
   footer {
@@ -446,6 +450,9 @@ footer {
 }
 footer > div {
   grid-area: footer;
+}
+footer > div h1 span {
+  color: #fff;
 }
 
 /* =============
@@ -471,7 +478,9 @@ footer > div {
 }
 #history > div {
   grid-area: history;
-  border: 1px solid green;
+}
+#history > div #intro h1 {
+  color: #F8C832;
 }
 @media (min-width: 768px) {
   #history > div #demo {
@@ -483,7 +492,6 @@ footer > div {
 @media (min-width: 768px) {
   #history > div #demo > div {
     grid-area: history-last;
-    border: 1px solid blue;
   }
 }
 @media (min-width: 768px) {
@@ -496,7 +504,6 @@ footer > div {
 @media (min-width: 768px) {
   #history > div #history-last > div {
     grid-area: history-last;
-    border: 1px solid red;
   }
 }
 
@@ -525,6 +532,8 @@ footer > div {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". skills-content .";
+  background-color: #222222;
+  color: #fff;
 }
 @media (min-width: 768px) {
   #skills > div #skills-content {
@@ -560,6 +569,9 @@ footer > div {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "s1 s2 s3" "s1 s7 s4" "s6 s5 s4";
   }
+}
+#skynet > div ul li h1 {
+  color: #F8C832;
 }
 #skynet > div ul #s1 {
   grid-area: s1;

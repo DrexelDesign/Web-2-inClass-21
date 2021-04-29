@@ -17,7 +17,13 @@
 
     >div{
         grid-area: history;
-        border: 1px solid green;
+        // border: 1px solid green;
+
+        #intro{
+            h1{
+                color: $yellow;
+            }
+        }
 
 
         #demo{
@@ -31,7 +37,7 @@
             >div{
                 @include md{
                     grid-area: history-last;
-                    border: 1px solid blue;
+                    // border: 1px solid blue;
                 }
             }
         }
@@ -48,7 +54,7 @@
             >div{
                 @include md{
                     grid-area: history-last;
-                    border: 1px solid red;
+                    // border: 1px solid red;
                 }
             }
         }
