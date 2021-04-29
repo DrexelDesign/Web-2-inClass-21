@@ -2,5 +2,44 @@
     Hero
 ============= */
 #hero{
-    
+    background-image: url("../img/heroes/hero.jpg");
+
+    // X: right center left
+    // y: top center bottom
+    background-position: center;
+    // background-repeat: no-repeat;
+    background-size: cover;
+    height: 360px;
+
+    @include md{
+        height: 700px;
+    }
+
+    @include lg{
+        height: 1000px;
+    }
+
+    @include xl{
+        height: 100vh;
+    }
+}
+
+
+#hero-2{
+    background-image: url("../img/heroes/hero-2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 360px;
+
+    @include md{
+        height: 700px;
+    }
+
+    @include lg{
+        height: 1000px;
+    }
+
+    @include xl{
+        height: 100vh;
+    }
 }

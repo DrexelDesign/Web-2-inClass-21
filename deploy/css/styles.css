@@ -458,6 +458,50 @@ footer > div h1 span {
 /* =============
     Hero
 ============= */
+#hero {
+  background-image: url("../img/heroes/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 360px;
+}
+@media (min-width: 768px) {
+  #hero {
+    height: 700px;
+  }
+}
+@media (min-width: 992px) {
+  #hero {
+    height: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    height: 100vh;
+  }
+}
+
+#hero-2 {
+  background-image: url("../img/heroes/hero-2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 360px;
+}
+@media (min-width: 768px) {
+  #hero-2 {
+    height: 700px;
+  }
+}
+@media (min-width: 992px) {
+  #hero-2 {
+    height: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero-2 {
+    height: 100vh;
+  }
+}
+
 /* =============
     History
 ============= */
@@ -547,7 +591,15 @@ footer > div h1 span {
 /* =============
     Skynet
 ============= */
+@media (min-width: 1200px) {
+  #skynet {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". skynet .";
+  }
+}
 #skynet > div {
+  grid-area: skynet;
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". skynet-content .";
@@ -556,28 +608,37 @@ footer > div h1 span {
   gap: 16px;
   display: grid;
   grid-area: skynet-content;
-  grid-template-areas: "s7" "s1" "s6" "s3";
+  grid-template-rows: repeat(5, 230px);
+  grid-template-areas: "s7" "s1" "s1" "s6" "s3";
 }
 @media (min-width: 768px) {
   #skynet > div ul {
     grid-template-columns: 50% auto;
+    grid-template-rows: repeat(3, 270px);
     grid-template-areas: "s1 s3" "s1 s7" "s5 s6";
   }
 }
 @media (min-width: 992px) {
   #skynet > div ul {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
     grid-template-areas: "s1 s2 s3" "s1 s7 s4" "s6 s5 s4";
   }
+}
+#skynet > div ul li {
+  background-size: cover;
+  background-position: center;
 }
 #skynet > div ul li h1 {
   color: #F8C832;
 }
 #skynet > div ul #s1 {
   grid-area: s1;
+  background-image: url("../img/gallery/gallery-1.jpg");
 }
 #skynet > div ul #s2 {
   display: none;
+  background-image: url("../img/gallery/gallery-2.jpg");
 }
 @media (min-width: 992px) {
   #skynet > div ul #s2 {
@@ -587,9 +648,11 @@ footer > div h1 span {
 }
 #skynet > div ul #s3 {
   grid-area: s3;
+  background-image: url("../img/gallery/gallery-3.jpg");
 }
 #skynet > div ul #s4 {
   display: none;
+  background-image: url("../img/gallery/gallery-4.jpg");
 }
 @media (min-width: 992px) {
   #skynet > div ul #s4 {
@@ -599,6 +662,7 @@ footer > div h1 span {
 }
 #skynet > div ul #s5 {
   display: none;
+  background-image: url("../img/gallery/gallery-5.jpg");
 }
 @media (min-width: 768px) {
   #skynet > div ul #s5 {
@@ -608,6 +672,7 @@ footer > div h1 span {
 }
 #skynet > div ul #s6 {
   grid-area: s6;
+  background-image: url("../img/gallery/gallery-6.jpg");
 }
 #skynet > div ul #s7 {
   grid-area: s7;

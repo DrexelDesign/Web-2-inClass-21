@@ -5,7 +5,17 @@
 
 #skynet{
 
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". skynet .";
+
+    }
+
     >div{
+
+        grid-area:  skynet;
+
         display: grid;
             grid-template-columns: 16px auto 16px;
             grid-template-areas: ". skynet-content .";
@@ -13,8 +23,10 @@
             gap:16px;
             display: grid;
             grid-area: skynet-content;
+            grid-template-rows:repeat(5, 230px);
             grid-template-areas:
             "s7" 
+            "s1"
             "s1"
             "s6"
             "s3";
@@ -23,6 +35,7 @@
                 // grid-template-columns: 50% 50%;
                 grid-template-columns: 50% auto;
                 // grid-template-columns: repeat(2, 1fr);
+                grid-template-rows:repeat(3, 270px);
                 grid-template-areas:
                 "s1 s3" 
                 "s1 s7"
@@ -31,6 +44,7 @@
 
             @include lg{
                 grid-template-columns: repeat(3, 1fr);
+                grid-template-rows:repeat(3, 250px);
                 grid-template-areas:
                 "s1 s2 s3" 
                 "s1 s7 s4"
@@ -38,6 +52,9 @@
             }
             
             li{
+                // height: 230px;
+                background-size: cover;
+                background-position: center;
                 h1{
                     color: $yellow;
                 }
@@ -45,10 +62,12 @@
 
             #s1{
                 grid-area: s1;
+                background-image: url("../img/gallery/gallery-1.jpg");
             }
 
             #s2{
                 display: none;
+                background-image: url("../img/gallery/gallery-2.jpg");
                 @include lg{
                     grid-area: s2;
                     display: list-item;
@@ -57,10 +76,12 @@
 
             #s3{
                 grid-area: s3;
+                background-image: url("../img/gallery/gallery-3.jpg");
             }
 
             #s4{
                 display: none;
+                background-image: url("../img/gallery/gallery-4.jpg");
                 @include lg{
                     grid-area: s4;
                     display: list-item;
@@ -69,6 +90,7 @@
 
             #s5{
                 display: none;
+                background-image: url("../img/gallery/gallery-5.jpg");
                 @include md{
                     grid-area: s5;
                     display: list-item;
@@ -77,6 +99,7 @@
 
             #s6{
                 grid-area: s6;
+                background-image: url("../img/gallery/gallery-6.jpg");
             }
 
             #s7{
