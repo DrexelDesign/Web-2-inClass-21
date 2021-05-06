@@ -6,9 +6,15 @@
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". history .";
+    padding: 60px 0;
+
+    @include md{
+        padding: 80px 0;
+    }
 
     @include lg{
         grid-template-columns: auto 60vw auto;
+        padding: 100px 0;
     }
 
     @include xl{
@@ -20,34 +26,73 @@
         // border: 1px solid green;
 
         #intro{
+            text-align: center;
             h1{
                 color: $yellow;
+                margin-top: 40px;
+                font-size: rem-calc(48px);
+
+                @include md{
+                    margin-top: 50px;
+                }
+
+                span{
+                    font-size: rem-calc(30px);
+                    display: block;
+                }
+            }
+
+            h4{
+                font-weight: 400;
+                margin-top: 30px;
+
+                @include md{
+                    margin-top: 70px;
+                    font-size: rem-calc(19);
+                }
+
             }
         }
 
 
-        #demo{
+        #history-middle{
+            text-align: justify;
             
             @include md{
                 display: grid;
                 grid-template-columns: 10vw auto 10vw;
                 grid-template-areas: ". history-last .";
             }
+
+            @include lg{
+                grid-template-columns: 0vw auto 0vw;
+            }
             
             >div{
                 @include md{
                     grid-area: history-last;
-                    // border: 1px solid blue;
+
+                    p{
+                        margin-top: 30px;
+                        line-height: rem-calc(26);
+
+                        @include md{
+                            margin-top: 50px;
+                        }
+                    }
                 }
             }
         }
 
         #history-last{
+            text-align: justify;
+            margin-top: 35px;
             
             @include md{
                 display: grid;
                 grid-template-columns: 10% auto 10%;
                 grid-template-areas: ". history-last .";
+                margin-top: 65px;
             }
             
 

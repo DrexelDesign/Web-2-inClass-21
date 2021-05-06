@@ -365,10 +365,6 @@ ul li {
   list-style: none;
 }
 
-img {
-  width: 100%;
-}
-
 /* =============
     Typography
 ============= */
@@ -376,7 +372,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -421,6 +417,7 @@ header {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". header .";
+  padding: 30px 0;
 }
 @media (min-width: 768px) {
   header {
@@ -429,9 +426,24 @@ header {
 }
 header > div {
   grid-area: header;
+  width: 100%;
+  display: flex;
 }
-header > div button {
+header > div aside {
+  margin-left: auto;
+}
+header > div aside button {
   background-color: #F8C832;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 23px;
+  font-weight: 700;
+  transition: 0.25s;
+  cursor: pointer;
+}
+header > div aside button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /* =============
@@ -442,16 +454,39 @@ footer {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". footer .";
   background-color: #F8C832;
+  padding: 45px 0;
 }
 @media (min-width: 768px) {
   footer {
     grid-template-columns: auto 60% auto;
   }
 }
+@media (min-width: 1200px) {
+  footer {
+    padding: 40px 0;
+  }
+}
 footer > div {
   grid-area: footer;
+  text-align: center;
 }
 footer > div h1 span {
+  color: #fff;
+}
+footer > div ul {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+footer > div ul li {
+  margin: 0 20px;
+}
+footer > div ul li a:link, footer > div ul li a:visited {
+  color: #000;
+  font-size: 1.875rem;
+  transition: 0.25s;
+}
+footer > div ul li a:link:hover, footer > div ul li a:link:active, footer > div ul li a:visited:hover, footer > div ul li a:visited:active {
   color: #fff;
 }
 
@@ -509,10 +544,17 @@ footer > div h1 span {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". history .";
+  padding: 60px 0;
+}
+@media (min-width: 768px) {
+  #history {
+    padding: 80px 0;
+  }
 }
 @media (min-width: 992px) {
   #history {
     grid-template-columns: auto 60vw auto;
+    padding: 100px 0;
   }
 }
 @media (min-width: 1200px) {
@@ -523,26 +565,72 @@ footer > div h1 span {
 #history > div {
   grid-area: history;
 }
+#history > div #intro {
+  text-align: center;
+}
 #history > div #intro h1 {
   color: #F8C832;
+  margin-top: 40px;
+  font-size: 3rem;
 }
 @media (min-width: 768px) {
-  #history > div #demo {
+  #history > div #intro h1 {
+    margin-top: 50px;
+  }
+}
+#history > div #intro h1 span {
+  font-size: 1.875rem;
+  display: block;
+}
+#history > div #intro h4 {
+  font-weight: 400;
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  #history > div #intro h4 {
+    margin-top: 70px;
+    font-size: 1.1875rem;
+  }
+}
+#history > div #history-middle {
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  #history > div #history-middle {
     display: grid;
     grid-template-columns: 10vw auto 10vw;
     grid-template-areas: ". history-last .";
   }
 }
+@media (min-width: 992px) {
+  #history > div #history-middle {
+    grid-template-columns: 0vw auto 0vw;
+  }
+}
 @media (min-width: 768px) {
-  #history > div #demo > div {
+  #history > div #history-middle > div {
     grid-area: history-last;
   }
+  #history > div #history-middle > div p {
+    margin-top: 30px;
+    line-height: 1.625rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #history > div #history-middle > div p {
+    margin-top: 50px;
+  }
+}
+#history > div #history-last {
+  text-align: justify;
+  margin-top: 35px;
 }
 @media (min-width: 768px) {
   #history > div #history-last {
     display: grid;
     grid-template-columns: 10% auto 10%;
     grid-template-areas: ". history-last .";
+    margin-top: 65px;
   }
 }
 @media (min-width: 768px) {
@@ -572,12 +660,29 @@ footer > div h1 span {
     grid-area: skills;
   }
 }
+#skills > div aside {
+  background-image: url("../img/skills/grid-bot.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 380px;
+}
+@media (min-width: 768px) {
+  #skills > div aside {
+    height: 476px;
+  }
+}
+@media (min-width: 992px) {
+  #skills > div aside {
+    height: auto;
+  }
+}
 #skills > div #skills-content {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". skills-content .";
   background-color: #222222;
   color: #fff;
+  padding: 60px 0;
 }
 @media (min-width: 768px) {
   #skills > div #skills-content {
@@ -587,15 +692,67 @@ footer > div h1 span {
 #skills > div #skills-content > div {
   grid-area: skills-content;
 }
+#skills > div #skills-content > div h1 {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3125rem;
+  line-height: 1.625rem;
+  margin-bottom: 35px;
+}
+#skills > div #skills-content > div p {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+#skills > div #skills-content > div ul li {
+  margin-top: 46px;
+}
+@media (min-width: 768px) {
+  #skills > div #skills-content > div ul li {
+    margin-top: 51px;
+  }
+}
+#skills > div #skills-content > div ul li .top {
+  display: flex;
+}
+#skills > div #skills-content > div ul li .top h5 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+#skills > div #skills-content > div ul li .top h4 {
+  font-size: 1.125rem;
+  margin-left: auto;
+}
+#skills > div #skills-content > div ul li .bottom {
+  background-color: #000;
+  height: 9px;
+  margin-top: 5px;
+  width: 100%;
+}
+#skills > div #skills-content > div ul li .bottom > div {
+  background-color: #F8C832;
+  height: 9px;
+}
+#skills > div #skills-content > div ul #emotion .yellow-bar {
+  width: 64%;
+}
+#skills > div #skills-content > div ul #learning .yellow-bar {
+  width: 90%;
+}
+#skills > div #skills-content > div ul #math .yellow-bar {
+  width: 95%;
+}
 
 /* =============
     Skynet
 ============= */
+#skynet {
+  padding: 60px 0;
+}
 @media (min-width: 1200px) {
   #skynet {
     display: grid;
     grid-template-columns: auto 1200px auto;
     grid-template-areas: ". skynet .";
+    padding: 100px 0;
   }
 }
 #skynet > div {
@@ -676,4 +833,11 @@ footer > div h1 span {
 }
 #skynet > div ul #s7 {
   grid-area: s7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skynet > div ul #s7 h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
 }

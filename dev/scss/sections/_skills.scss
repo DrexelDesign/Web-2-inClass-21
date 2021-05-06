@@ -20,7 +20,18 @@
         }
 
         aside{
+            background-image: url('../img/skills/grid-bot.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 380px;
 
+            @include md {
+                height: 476px;
+            }
+
+            @include lg {
+                height: auto;
+            }
         }
     
     
@@ -30,6 +41,7 @@
             grid-template-areas: ". skills-content .";
             background-color: $charcoal;
             color: $white;
+            padding: 60px 0;
     
             @include md{
                 grid-template-columns: 10% auto 10%;
@@ -37,6 +49,72 @@
         
             >div{
                 grid-area: skills-content;
+
+                h1{
+                    font-family: 'Comfortaa', cursive;
+                    font-size: rem-calc(21);
+                    line-height: rem-calc(26);
+                    margin-bottom: 35px;
+                }
+
+                p{
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(26);
+                }
+
+                ul{
+                    li{
+                        margin-top: 46px;
+
+                        @include md {
+                            margin-top: 51px;
+                        }
+
+                        .top {
+                            display: flex;
+
+                            h5 {
+                                font-size: rem-calc(18);
+                                font-weight: 400;
+                            }
+
+                            h4 {
+                                font-size: rem-calc(18);
+                                margin-left: auto;
+                            }
+                        }
+
+                        .bottom {
+                            background-color: $black;
+                            height: 9px;
+                            margin-top: 5px;
+                            width: 100%;
+
+                            >div {
+                                background-color: $yellow;
+                                height: 9px;
+                            }
+                        }
+                    }
+
+                    #emotion {
+                        .yellow-bar {
+                            width: 64%;
+                        }
+                    }
+
+                    #learning {
+                        .yellow-bar {
+                            width: 90%;
+                        }
+                    }
+
+                    #math {
+                        .yellow-bar {
+                            width: 95%;
+                        }
+                    }
+                }
             } 
         }
     }

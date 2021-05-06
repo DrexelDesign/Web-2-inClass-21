@@ -5,10 +5,13 @@
 
 #skynet{
 
+    padding: 60px 0;
+
     @include xl{
         display: grid;
         grid-template-columns: auto 1200px auto;
         grid-template-areas: ". skynet .";
+        padding: 100px 0;
 
     }
 
@@ -104,6 +107,15 @@
 
             #s7{
                 grid-area: s7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h1{
+                    font-family: 'Pacifico', cursive;
+                    font-weight: 400;
+                }
+                
             }
         }
     }

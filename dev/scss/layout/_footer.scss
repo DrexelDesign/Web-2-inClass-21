@@ -6,16 +6,44 @@ footer{
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". footer .";
     background-color: $yellow;
+    padding: 45px 0;
 
     @include md{
         grid-template-columns:  auto 60% auto;
     }
+
+    @include xl{
+        padding: 40px 0;
+    }
+
     >div{
         grid-area: footer;
+        text-align: center;
 
         h1{
             span{
                 color: $white;
+            }
+        }
+
+        ul{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            li{
+                margin: 0 20px;
+               
+
+                a:link, a:visited{
+                    color: $black;
+                    font-size: rem-calc(30);
+                    transition: 0.25s;
+                    
+                    &:hover, &:active{
+                      color: $white;
+                    }
+                  }
             }
         }
     }
