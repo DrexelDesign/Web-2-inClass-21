@@ -8,37 +8,39 @@ header {
     top: 0;
     width: 100%;
 
+
+    // @include xl{
+    //     display: grid;
+    //     grid-template-columns: auto 1200 auto;
+    //     grid-template-areas: ". header .";
+    // }
+
     >div {
         display: grid;
         grid-template-areas: 
-        "burger survival"
+        "logo burger"
         "nav nav";
         grid-template-columns: 20% auto;
+        // border: 1px solid red;
 
         @include lg {
-            grid-template-areas: "nav survival";
+            grid-template-areas: "logo nav";
             grid-template-columns: 20% auto;
         }
 
-        #button-container {
-            grid-area: survival;
-            padding: 10px;
-            text-align: right;
+        // @include xl{
+        //     grid-area: header;
+        // }
 
-           button {
-                background-color: $yellow;
-                border-radius: 23px;
-                color: $black;
-                display: inline-block;
-                font-size: rem-calc(18);
-                font-weight: 700;
-                padding: 10px 20px;
-                border: none;
+        #logo-container {
+            grid-area: logo;
+            padding: 10px;
+            // border: 1px solid green;
+
+           a:link, a:visited {
                 transition: 0.25s;
 
                 &:hover {
-                    background-color: $black;
-                    color: $white;
                 }
             }
 
@@ -56,12 +58,14 @@ header {
             }
 
             i {
+                margin-left: auto;
                 cursor: pointer;
                 font-size: rem-calc(30);
             }
         }
 
         #nav-container {
+            // border: 1px solid blue;
             background-color: $charcoal;
             display: none;
             grid-area: nav;

@@ -7,10 +7,13 @@
 
         @include lg {
             display: flex;
+            justify-content: flex-end;
         }
 
         li {
             margin-bottom: 20px;
+            // border: 1px solid red;
+            text-align: right;
 
             @include lg {
                 align-items: center;
@@ -37,14 +40,14 @@
             }
         }
 
-        li:first-child {
-            border: none;
-            display: none;
+        // li:first-child {
+        //     border: none;
+        //     display: none;
 
-            @include md{
-                display: list-item;
-            }
-        }
+        //     @include md{
+        //         display: list-item;
+        //     }
+        // }
 
         li:last-child {
             border: none;
