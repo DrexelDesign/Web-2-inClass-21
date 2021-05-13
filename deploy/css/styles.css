@@ -410,40 +410,124 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #nav-container ul {
+    display: flex;
+  }
+}
+#nav-container ul li {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  #nav-container ul li {
+    align-items: center;
+    border-right: 2px solid #222222;
+    display: flex;
+    margin-bottom: 0px;
+  }
+}
+#nav-container ul li a:link,
+#nav-container ul li a:visited {
+  color: #fff;
+  font-family: "Comfortaa", cursive;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media (min-width: 992px) {
+  #nav-container ul li a:link,
+#nav-container ul li a:visited {
+    color: #000;
+  }
+}
+#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
+#nav-container ul li a:visited:hover,
+#nav-container ul li a:visited:active {
+  color: #F8C832;
+}
+#nav-container ul li:first-child {
+  border: none;
+  display: none;
+}
+@media (min-width: 768px) {
+  #nav-container ul li:first-child {
+    display: list-item;
+  }
+}
+#nav-container ul li:last-child {
+  border: none;
+}
+
 /* =============
     Header
 ============= */
 header {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". header .";
-  padding: 30px 0;
-}
-@media (min-width: 768px) {
-  header {
-    grid-template-columns: 32px auto 32px;
-  }
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 header > div {
-  grid-area: header;
-  width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-areas: "burger survival" "nav nav";
+  grid-template-columns: 20% auto;
 }
-header > div aside {
-  margin-left: auto;
+@media (min-width: 992px) {
+  header > div {
+    grid-template-areas: "nav survival";
+    grid-template-columns: 20% auto;
+  }
 }
-header > div aside button {
+header > div #button-container {
+  grid-area: survival;
+  padding: 10px;
+  text-align: right;
+}
+header > div #button-container button {
   background-color: #F8C832;
-  border: none;
-  padding: 10px 25px;
   border-radius: 23px;
+  color: #000;
+  display: inline-block;
+  font-size: 1.125rem;
   font-weight: 700;
+  padding: 10px 20px;
+  border: none;
   transition: 0.25s;
-  cursor: pointer;
 }
-header > div aside button:hover {
+header > div #button-container button:hover {
   background-color: #000;
   color: #fff;
+}
+header > div #burger-container {
+  align-items: center;
+  display: flex;
+  grid-area: burger;
+  padding: 10px;
+}
+@media (min-width: 992px) {
+  header > div #burger-container {
+    display: none !important;
+  }
+}
+header > div #burger-container i {
+  cursor: pointer;
+  font-size: 1.875rem;
+}
+header > div #nav-container {
+  background-color: #222222;
+  display: none;
+  grid-area: nav;
+  padding: 20px 10px 10px;
+}
+@media (min-width: 992px) {
+  header > div #nav-container {
+    background-color: #fff;
+    display: block !important;
+  }
 }
 
 /* =============
