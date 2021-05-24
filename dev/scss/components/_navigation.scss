@@ -12,7 +12,6 @@
 
         li {
             margin-bottom: 20px;
-            // border: 1px solid red;
             text-align: right;
 
             @include lg {
@@ -29,6 +28,7 @@
                 padding: 0 20px;
                 text-decoration: none;
                 transition: 0.25s;
+
                 @include lg {
                     color: $black;
                 }
@@ -39,15 +39,6 @@
                 }
             }
         }
-
-        // li:first-child {
-        //     border: none;
-        //     display: none;
-
-        //     @include md{
-        //         display: list-item;
-        //     }
-        // }
 
         li:last-child {
             border: none;
